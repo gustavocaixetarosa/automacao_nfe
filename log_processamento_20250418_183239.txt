@@ -1,0 +1,21 @@
+Log de processamento iniciado em 2025-04-18 18:32:39
+==================================================
+
+[2025-04-18 18:39:56] ERRO - Campos vazios: CPF - Cliente: RAQUEL ALVES DE OLIVEIRA SOUSA
+Dados da linha: {'nome_cliente': 'RAQUEL ALVES DE OLIVEIRA SOUSA', 'codigo_cliente': '1640', 'data_pagamento': '11/04/2025', 'valor_total': '178,00', 'cpf': ''}
+--------------------------------------------------
+[2025-04-18 18:41:43] ERRO - Campos vazios: CPF - Cliente: DANIELA APARECIDA ROSA
+Dados da linha: {'nome_cliente': 'DANIELA APARECIDA ROSA', 'codigo_cliente': '931', 'data_pagamento': '07/04/2025', 'valor_total': '155,89', 'cpf': ''}
+--------------------------------------------------
+[2025-04-18 18:55:08] ERRO - Campos vazios: CPF - Cliente: LUDMILA FACUNDES DA SILVA
+Dados da linha: {'nome_cliente': 'LUDMILA FACUNDES DA SILVA', 'codigo_cliente': '2450', 'data_pagamento': '11/04/2025', 'valor_total': '150,00', 'cpf': ''}
+--------------------------------------------------
+[2025-04-18 19:04:53] ERRO - Campos vazios: CPF - Cliente: JOAO GUILHERME GOMES DA CONCEICAO
+Dados da linha: {'nome_cliente': 'JOAO GUILHERME GOMES DA CONCEICAO', 'codigo_cliente': '18992', 'data_pagamento': '11/04/2025', 'valor_total': '567,39', 'cpf': ''}
+--------------------------------------------------
+
+==================================================
+Processamento concluído em 2025-04-18 19:07:39
+Total de registros: 125
+Processados com sucesso: 121
+Falhas: 4
