@@ -131,9 +131,6 @@ input_arquivo_assuncao.grid(row=0, column=0, padx=(0, 10))
 botao_assuncao = ctk.CTkButton(frame_assuncao, text="📁", width=40, command=selecionar_arquivo_assuncao)
 botao_assuncao.grid(row=0, column=1)
 
-
-
-
 # ===== BOTÃO COMBINAR + RESULTADO =====
 botao_combinar = ctk.CTkButton(app, text="Combinar", command=transformar_dados)
 botao_combinar.pack(pady=15)
