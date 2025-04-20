@@ -103,7 +103,7 @@ if __name__ == "__main__":
 
     dados = extrair_linhas(sicoob_csv)
 
-    cabecalho = ['nome_cliente', 'codigo_cliente', 'data_pagamento', 'valor_total', 'descricao']
+    cabecalho = ['nome_cliente', 'codigo_cliente', 'data_pagamento', 'valor_total', 'discriminacao']
     csv_tratado = escreve_arquivo(dados, cabecalho, sicoob_csv)
 
     df_xml = processar_xml(assuncao_xml)

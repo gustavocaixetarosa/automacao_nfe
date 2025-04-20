@@ -64,6 +64,12 @@ with open(arquivo_csv, 'r', encoding='utf-8') as arquivo:
         valor_total = linha['valor_total'] + '00'
         cpf_cliente = linha['cpf']
         nome_cliente = linha['nome_cliente']
+        mensagem_discriminacao = ''
+
+        if linha.get('discriminacao'): 
+            mensagem_discriminacao = linha['discriminacao']
+        else:
+            mensagem_discriminacao = 'CNH A VISTA'
 
         campos_vazios = []
         if not nome_cliente.strip():
@@ -124,7 +130,6 @@ with open(arquivo_csv, 'r', encoding='utf-8') as arquivo:
         driver.switch_to.default_content()
         driver.switch_to.frame(iframe)
 
-        mensagem_discriminacao = 'CNH AVISTA'
         mensagem_descricao = 'PACOTE PARCIAL'
 
 
@@ -133,6 +138,8 @@ with open(arquivo_csv, 'r', encoding='utf-8') as arquivo:
         )
 
         discriminacao.send_keys(mensagem_discriminacao)
+
+        time.sleep(50)
 
 
         descricao = WebDriverWait(driver, 10).until(

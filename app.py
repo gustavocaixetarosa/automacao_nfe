@@ -20,7 +20,7 @@ def transformar_dados():
 def abrir_cadastro_clientes():
     janela = ctk.CTkToplevel(app)
     janela.title("Cadastro de Clientes")
-    janela.geometry("700x500")
+    janela.geometry("750x500")
 
     clientes = []
 
@@ -40,20 +40,24 @@ def abrir_cadastro_clientes():
         valor = ctk.CTkEntry(linha_frame, width=100, placeholder_text="Valor Total")
         valor.pack(side="left", padx=5)
 
+        discriminacao = ctk.CTkEntry(linha_frame, width=150, placeholder_text="Discriminacao")
+        discriminacao.pack(side="left", padx=5)
+
         cpf = ctk.CTkEntry(linha_frame, width=150, placeholder_text="CPF")
         cpf.pack(side="left", padx=5)
 
-        clientes.append((nome, codigo, valor, cpf))
+        clientes.append((nome, codigo, valor, discriminacao, cpf))
 
     def gerar_csv():
         with open("customizados/clientes.csv", "w", newline="") as f:
             writer = csv.writer(f)
-            writer.writerow(["nome_cliente", "codigo_cliente", "valor_total", "cpf"])
-            for nome, codigo, valor, cpf in clientes:
+            writer.writerow(["nome_cliente", "codigo_cliente", "valor_total", "discriminacao","cpf"])
+            for nome, codigo, valor, discriminacao, cpf in clientes:
                 writer.writerow([
                     nome.get(),
                     codigo.get(),
                     valor.get(),
+                    discriminacao.get(),
                     cpf.get()
                 ])
 
@@ -158,8 +162,8 @@ botao_notas.grid(row=0, column=1)
 
 
 # ===== BOTÃO GERAR NOTAS =====
-botao_combinar = ctk.CTkButton(app, text="Combinar", command=gerar_notas)
-botao_combinar.pack(pady=15)
+botao_gerar_notas = ctk.CTkButton(app, text="Gerar notas", command=gerar_notas)
+botao_gerar_notas.pack(pady=15)
 
 resultado2 = ctk.CTkLabel(app, text='')
 resultado2.pack()
