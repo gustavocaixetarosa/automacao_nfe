@@ -113,7 +113,7 @@ if __name__ == "__main__":
     df_xml['codigo'] = df_xml['codigo'].astype(str)
 
     df_merged = pd.merge(df_csv, df_xml, left_on='codigo_cliente', right_on='codigo', how='left')
-    df_merged.drop(columns=['codigo', 'nome'], inplace=True)
+    df_merged.drop(columns=['codigo', 'nome', 'data_pagamento'], inplace=True)
     print(df_merged)
 
     hoje = datetime.date.today()
