@@ -1,4 +1,4 @@
-nome_cliente,codigo_cliente,data_pagamento,valor_total
+nome_cliente,codigo_cliente,data_pagamento,valor_total,descricao
 VENICIO JOSE DA SILVA,50349,11/04/2025,"149,00"
 DAIANE APARECIDA DA SILVA BATISTA,39092,07/04/2025,"137,00"
 MIRIAN ALVES DA SILVA,39128,08/04/2025,"149,00"
