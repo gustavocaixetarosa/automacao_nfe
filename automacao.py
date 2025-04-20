@@ -38,7 +38,7 @@ entrar.send_keys(Keys.RETURN)
 arquivo_csv = sys.argv[1]
 
 timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-arquivo_log = f"log_processamento_{timestamp}.txt"
+arquivo_log = f"logs/log_processamento_{timestamp}.txt"
 
 # Inicializar arquivo de log
 with open(arquivo_log, 'w', encoding='utf-8') as log:
