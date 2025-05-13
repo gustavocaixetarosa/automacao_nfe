@@ -4,11 +4,13 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import Select
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from webdriver_manager.chrome import ChromeDriverManager
 
 import time
 import csv 
 import sys
 from datetime import datetime
+import os
 
 def registrar_erro(arquivo_log, linha, motivo):
     """Registra erros em um arquivo de log"""
@@ -18,7 +20,7 @@ def registrar_erro(arquivo_log, linha, motivo):
         log.write(f"Dados da linha: {linha}\n")
         log.write("-" * 50 + "\n")
 
-driver = webdriver.Chrome()
+driver = webdriver.Chrome(ChromeDriverManager().install())
 
 site_prefeitura = "https://patrocinio.simplissweb.com.br/contrib/Inicio"
 cnpj = '01.075.692/0001-08'
@@ -38,7 +40,7 @@ entrar.send_keys(Keys.RETURN)
 arquivo_csv = sys.argv[1]
 
 timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-arquivo_log = f"logs/log_processamento_{timestamp}.txt"
+arquivo_log = os.path.join("logs", f"log_processamento_{timestamp}.txt")
 
 # Inicializar arquivo de log
 with open(arquivo_log, 'w', encoding='utf-8') as log:
